@@ -114,7 +114,7 @@ function calculateDistance(currentNode, targetNode) {
     let yDiff = Math.abs(currentNode.y - targetNode.y);
 
     let rem = Math.abs(xDiff - yDiff);
-    currentNode.object.innerHTML = `${stepDiagonal * Math.min(xDiff, yDiff) + stepLinear * rem}`
+
     return stepDiagonal * Math.min(xDiff, yDiff) + stepLinear * rem;
 }
 
@@ -122,16 +122,23 @@ let tempNode = new Node(null, null);
 tempNode.fCost = Infinity;
 
 function calculateSmallestCost(list) {
-    console.log('LIST HERE');
-    console.log(list);
     let smallest = tempNode;
     list.forEach(node => {
-        if (node.fCost < tempNode.fCost) {
+
+        // node.hCost = calculateDistance(node, endNode);
+        // node.gCost = calculateDistance(node, startNode);
+        // node.fCost = node.gCost + node.hCost;
+
+        if (node.fCost < smallest.fCost) {
+            console.log(`${node.fCost} < ${smallest.fCost}`);
             smallest = node;
         }
-        console.log(node);
     });
     console.log(smallest.fCost);
+    if (smallest != startNode || smallest != endNode) {
+        smallest.object.style.backgroundColor = 'yellow';
+    }
+
     return smallest;
 }
 
@@ -147,8 +154,9 @@ function startGame() {
     startNode.hCost = calculateDistance(startNode, endNode);
     startNode.fCost = startNode.gCost + startNode.hCost;
 
-    let temp = 3;
-    while (temp > 0) {
+    let temp = 5;
+    while (open.length > 0) {
+        console.log(open);
         currentNode = calculateSmallestCost(open);
         currentNode.object.innerHTML = `${currentNode.fCost}`;
         open.splice(open.indexOf(currentNode));
@@ -156,29 +164,48 @@ function startGame() {
 
         if (currentNode == endNode) {
             console.log('found end node.');
+            tracePath();
             break;
         }
 
 
         let neighbours = getNeighbours(currentNode);
-        console.log(neighbours);
 
-        for (let neig = 0; neig < neighbours.length; neig++) {
-            neighbours[neig].gCost = calculateDistance(neighbours[neig], startNode);
-            neighbours[neig].hCost = calculateDistance(neighbours[neig], endNode);
-            neighbours[neig].fCost = neighbours[neig].gCost + neighbours[neig].hCost;
+        neighbours.forEach(node => {
+            node.hCost = calculateDistance(node, endNode);
+            node.gCost = calculateDistance(node, startNode);
+            node.fCost = node.gCost + node.hCost;
+            node.parent = currentNode;
 
-            let newCost = currentNode.gCost + calculateDistance(neighbours[neig], currentNode);
-            if (newCost < calculateDistance(neighbours[neig], endNode)) {
-                neighbours[neig].gCost = newCost;
-                neighbours[neig].parent = currentNode;
+            let newCost = currentNode.gCost + calculateDistance(currentNode, node);
+            if (newCost < node.gCost) {
+                node.gCost = newCost;
+                node.parent = currentNode;
             }
-            if (!(open.includes(neighbours[neig])) || closed.includes(neighbours[neig])) {
-                open.push(neighbours[neig]);
-            }
-        }
 
+
+
+            if (!open.includes(node) && !closed.includes(node)) {
+                open.push(node);
+            }
+
+
+
+        });
         temp--;
+    }
+}
+
+function tracePath() {
+    let currentNode = endNode;
+    let timer = 100;
+    while (timer > 0) {
+        console.log(currentNode.parent);
+        if (currentNode != endNode && currentNode != startNode) {
+            currentNode.object.style.backgroundColor = 'aqua';
+        }
+        currentNode = currentNode.parent;
+        timer--;
     }
 }
 
