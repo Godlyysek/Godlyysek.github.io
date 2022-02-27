@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+}
+
+html {
+    background-color: rgb(27, 27, 27);
+}
+
+div {
+    display: block;
+    font-size: 30px;
+}
+
+.clicker {
+    width: 500px;
+    height: auto;
+}
+
+.flex-container {
+    margin: 10px;
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(37, 37, 37);
+    border: 2px solid rgb(112, 112, 112);
+    max-width: 100%;
+    margin-top: 5%;
+}
+
+.left {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+.clicker:active {
+    transform: translateY(3px);
+}
+
+h2 {
+    font-size: 2.3vw;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 350;
+}
+
+.flex-item {
+    flex-shrink: 2;
+}
+
+h1 {
+    display: block;
+    color: white;
+}
+
+.title {
+    font-weight: 200;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 30px;
+        padding: 10px;
+    }
+}
+
+.in-flex {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.mod:active {
+    transform: translateY(3px);
+}
+
+.btn {
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(143, 143, 143);
+    color: white;
+    font-size: 20px;
+    border-radius: 10%;
+}
+
+.mod {
+    flex-shrink: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#text {
+    opacity: 0;
+    transition: 1s;
+}
+
+#text.fade-in {
+    opacity: 1;
+    transition: 1s;
+}
+
+#text.hide {
+    display: none;
+}
+
+.cost {
+    display: inline-block;
+}
+
+.text {
+    padding: 20px;
+    color: white;
+    font-weight: 350;
+    font-size: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mods {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.mod2 {
+    flex-shrink: 3;
+}
+
+p {
+    font-size: 40px;
+    color: white;
+    font-weight: 200;
+    padding: 20px;
+}

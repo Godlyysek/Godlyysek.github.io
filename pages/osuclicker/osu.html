@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='osu.css'>
+    <link rel="icon" href="./images/osu.png">
+    <title class='title'>osu!clicker</title>
+</head>
+
+<body>
+    <div class='flex-container'>
+        <div class='left'>
+            <img src='./images/osu.png' onclick="click_btn('./files/key-delete.wav')" class='clicker flex-item'>
+            <h2 id='counter' class='flex-item'>PP: 0</h2>
+        </div>
+        <div class='right'>
+            <h1 id='ppsec'>PP Per Second: 0</h1>
+            <div class='in-flex'>
+                <div class='row'>
+                    <div class='mods'>
+                        <img src='./images/auto.png' class='mod' id='auto' onclick='buy(0)'>
+                        <div class="text" id='cost1'>COST1</div>
+                    </div>
+                    <div class='mods'>
+                        <img src='./images/hd.png' class='mod' id='hd' onclick='buy(1)'>
+                        <div class="text" id='cost2'>COST1</div>
+                    </div>
+                    <div class='mods'>
+                        <img src='./images/hr.png' class='mod' id='hr' onclick='buy(2)'>
+                        <div class="text" id='cost3'>COST1</div>
+                    </div>
+                    <div class='mods'>
+                        <img src='./images/dt.png' class='mod' id='dt' onclick='buy(3)'>
+                        <div class="text" id='cost4'>COST1</div>
+                    </div>
+
+                </div>
+
+                <div class='row'>
+                    <div class='mods'>
+                        <img src='./images/nc.png' class='mod mod2' id='nc' onclick='buy(4)'>
+                        <div class="text" id='cost5'>COST1</div>
+                    </div>
+                    <div class='mods'>
+                        <img src='./images/so.png' class='mod mod2' id='so' onclick='buy(5)'>
+                        <div class="text" id='cost6'>COST1</div>
+                    </div>
+                    <div class='mods'>
+                        <img src='./images/sd.png' class='mod mod2' id='sd' onclick='buy(6)'>
+                        <div class="text" id='cost7'>COST1</div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <p id='time'></p>
+
+
+    <script src='osu.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Hangman</title>
+</head>
+
+<body>
+
+    <div class='flex-container'>
+
+        <nav>
+            <a href="" id='reset' class='nav'>NEW WORD</a>
+        </nav>
+
+        <div class='top-flex'>
+
+            <div class='word-flex'>
+                <div class="space">
+                    <h1 class="word" id="word"></h1>
+                </div>
+
+                <div class="kb">
+                    <div class='space'>
+                        <button class='letter' onclick="guess('a')" id='a'>A</button>
+                        <button class='letter' onclick="guess('b')" id='b'>B</button>
+                        <button class='letter' onclick="guess('c')" id='c'>C</button>
+                        <button class='letter' onclick="guess('d')" id='d'>D</button>
+                        <button class='letter' onclick="guess('e')" id='e'>E</button>
+                        <button class='letter' onclick="guess('f')" id='f'>F</button>
+                        <button class='letter' onclick="guess('g')" id='g'>G</button>
+                        <button class='letter' onclick="guess('h')" id='h'>H</button>
+                        <button class='letter' onclick="guess('i')" id='i'>I</button>
+                        <button class='letter' onclick="guess('j')" id='j'>J</button>
+                        <button class='letter' onclick="guess('k')" id='k'>K</button>
+                        <button class='letter' onclick="guess('l')" id='l'>L</button>
+                        <button class='letter' onclick="guess('m')" id='m'>M</button>
+                        <button class='letter' onclick="guess('n')" id='n'>N</button>
+                        <button class='letter' onclick="guess('o')" id='o'>O</button>
+                        <button class='letter' onclick="guess('p')" id='p'>P</button>
+                        <button class='letter' onclick="guess('q')" id='q'>Q</button>
+                        <button class='letter' onclick="guess('r')" id='r'>R</button>
+                        <button class='letter' onclick="guess('s')" id='s'>S</button>
+                        <button class='letter' onclick="guess('t')" id='t'>T</button>
+                        <button class='letter' onclick="guess('u')" id='u'>U</button>
+                        <button class='letter' onclick="guess('v')" id='v'>V</button>
+                        <button class='letter' onclick="guess('w')" id='w'>W</button>
+                        <button class='letter' onclick="guess('x')" id='x'>X</button>
+                        <button class='letter' onclick="guess('y')" id='y'>Y</button>
+                        <button class='letter' onclick="guess('z')" id='z'>Z</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <script src='./main.js'></script>
+
+</body>
+
+</html>

@@ -5,24 +5,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pathfinding</title>
-
+    <title>Lukas Bajtek</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-    <div class="main">
 
-        <div class="header">
-            <button class='btn btn-top' id='launch' onclick="startGame()">Launch</button>
+    <li class="navbar">
+        <a href="#home" class="nav">Home</a>
+        <a href="#about" class="nav">About</a>
+        <a href="#work" class="nav">Work</a>
+        <a href="#contact" class="nav">Contact</a>
+    </li>
+
+
+    <div class="main-title">
+        <img src="./images/bg_2.jpg" class="bg-img" id="home">
+        <h1 class="title">Lukas Bajtek<br>Junior Software Developer</h1>
+        <a href="./files/Lukas_Bajtek_CV.pdf" download="Bajtek_CV.pdf" class="dl">Download CV</a>
+    </div>
+
+    <div class="about-title">
+        <img src="./images/bg_3.jpeg" class="bg-img" id="about">
+        <div class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="ab">
+                    Junior Software Developer experienced in front-end development as well as back-end.<br>I have project experience in developing front-end applications, creating APIs and managing databases.
+                </div>
+            </div>
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="ab col">
+                    <div class="d">
+                        <li>
+                            <h3 class="skill html">HTML</h3>
+                            <h3 class="skill css">CSS</h3>
+                            <h3 class="skill js">JavaScript</h3>
+                        </li>
+                    </div>
+                    <div class="d">
+                        <li>
+                            <h3 class="skill sql">SQL</h3>
+                            <h3 class="skill php">PHP</h3>
+                            <h3 class="skill python">Python</h3>
+                        </li>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
-        <table class="game" id="game">
+    </div>
 
-        </table>
+    <div class="work">
+        <img src="./images/bg_4.jpeg" class="bg-img" id="work">
+        <div class="work-cols">
+            <h2>My Work</h2>
+            <div class="row">
+                <div class="column">
+                    <a href="./pages/osuclicker/osu.html" class="project" target="_blank">osu!clicker</a>
+                    <a href="./pages/hangman/index.html" class="project" target="_blank">Hangman</a>
+                    <a href="./pages/pathfinding/index.html" class="project" target="_blank">A* Pathfinding</a>
+                    <a href="./pages/wordle/index.html" class="project" target="_blank">Wordle Clone</a>
+                    <a href="./pages/tictac/index.html" class="project" target="_blank">Tic Tac Toe</a>
+                </div>
 
+                <div class="column">
+                    <a href="https://github.com/Godlyysek/osu-clicker" class="project" target="_blank">Github Page</a>
+                    <a href="https://github.com/Godlyysek/hangman-js" class="project" target="_blank">Github Page</a>
+                    <a href="https://github.com/Godlyysek/pathfinding" class="project" target="_blank">Github Page</a>
+                    <a href="https://github.com/Godlyysek/wordleClone" class="project" target="_blank">Github Page</a>
+                    <a href="https://github.com/Godlyysek/tictactoe" class="project" target="_blank">Github Page</a>
+                </div>
+            </div>
 
+        </div>
     </div>
 
 
@@ -30,7 +89,8 @@
 
 
 
-    <script src="./index.js"></script>
+
+    <script src="./main.js"></script>
 
 
 </body>
