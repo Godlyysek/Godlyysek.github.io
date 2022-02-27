@@ -57,7 +57,7 @@ h1 {
 }
 
 .temp:hover {
-    background-color: rgb(67, 255, 34);
+    background-color: rgb(63, 211, 36);
 }
 
 .game {
@@ -68,7 +68,7 @@ h1 {
     background-color: red;
 }
 
-.end {
+.end-square {
     background-color: red;
     border: 1px solid rgb(146, 146, 146);
 }
@@ -79,4 +79,8 @@ h1 {
     height: 40px;
     background-color: rgb(67, 255, 34);
     text-align: center;
+}
+
+.wall {
+    background-color: rgb(68, 68, 68);
 }
